@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Obligar a que los marcadores se muestren dentro de elementos editables */
+[contenteditable="true"].list-disc li {
+  list-style-type: disc !important;
+}
+
+[contenteditable="true"].list-decimal li {
+  list-style-type: decimal !important;
+}
+
+/* Evitar que el texto se pegue al punto */
+[contenteditable="true"] li {
+  margin-bottom: 0.25rem;
+}
