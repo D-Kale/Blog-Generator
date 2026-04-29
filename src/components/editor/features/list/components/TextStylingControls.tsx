@@ -1,6 +1,6 @@
 import React from 'react';
 import { Type, Bold, RotateCcw, AlignLeft, AlignCenter, AlignRight, AlignJustify, Italic, Underline, Strikethrough } from 'lucide-react';
-import { FormatControls } from '../shared';
+import { FormatControls } from '../../../shared';
 import type { LucideIcon } from 'lucide-react';
 
 // Helper functions para iconos

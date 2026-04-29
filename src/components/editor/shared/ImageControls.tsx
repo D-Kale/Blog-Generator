@@ -24,9 +24,9 @@ import {
   createStyleHandler,
   getImageDisplayUrl,
   handleImageError
-} from '../config/images';
-import { TabsContainer, SelectControl } from './shared';
-import type { Block } from '../CanvasEditor';
+} from '../config/imageControls';
+import { TabsContainer, SelectControl } from '.';
+import type { Block } from '../core/CanvasEditor';
 
 interface ImageControlsProps {
   styles: string;

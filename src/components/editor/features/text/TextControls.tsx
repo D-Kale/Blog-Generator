@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Type, Palette, Settings } from 'lucide-react';
-import { TabsContainer } from './shared';
-import { BasicTextControls, StyleTextControls, AdvancedTextControls } from './text';
+import { TabsContainer } from '../../shared';
+import { BasicTextControls, StyleTextControls, AdvancedTextControls } from './components';
 import { 
   TEXT_OPTIONS, 
   TEXT_UI_CONFIG,
@@ -20,9 +20,8 @@ import {
   resetTextStyles,
   validateTextContent,
   calculateReadabilityMetrics
-} from '../config/text';
-import { enrichedTextPresets, enrichedTextThemes } from '../config/text/presets';
-import type { Block } from '../CanvasEditor';
+} from '../../config/text';
+import { enrichedTextPresets, enrichedTextThemes } from '../../config/text/presets';
 
 interface TextControlsProps {
   styles: string;

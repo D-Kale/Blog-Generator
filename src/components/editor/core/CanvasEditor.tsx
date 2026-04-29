@@ -9,10 +9,10 @@ import {
   Download,
   Settings
 } from 'lucide-react';
-import { TextControls } from './components/TextControls';
-import { ListControls } from './components/ListControls';
-import { CanvasBlock } from './ui/CanvasBlock';
-import { ImageControls } from './components/ImageControls';
+import { TextControls } from '../features/text/TextControls';
+import { ListControls } from '../features/list/ListControls';
+import { CanvasBlock } from './CanvasBlock';
+import { ImageControls } from '../shared/ImageControls';
 
 export interface Block {
   id: string;

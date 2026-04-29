@@ -8,7 +8,7 @@ import {
   getSizeIcon, 
   getWeightIcon, 
   getPreviewIcon 
-} from '../../helpers';
+} from '../../editor/helpers/iconHelpers';
 
 export interface FormatControlItem {
   label: string;

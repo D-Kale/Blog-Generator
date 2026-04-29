@@ -1,7 +1,7 @@
 import React from 'react';
 import { Zap, Type, Bold, AlignLeft, Italic, Underline } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import { PresetGrid, SelectControl } from '../shared';
+import { PresetGrid, SelectControl } from '../../../shared';
 
 interface BasicTextControlsProps {
   enrichedPresets: Array<{

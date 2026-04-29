@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeSelector, ColorPalette, FormatControls } from '../shared';
+import { ThemeSelector, ColorPalette, FormatControls } from '../../shared';
 import type { LucideIcon } from 'lucide-react';
 import { CaseSensitive, Type as TextIcon, Type, Bold, AlignLeft, AlignCenter, AlignRight, AlignJustify, Italic, Underline, Strikethrough, Palette } from 'lucide-react';
 

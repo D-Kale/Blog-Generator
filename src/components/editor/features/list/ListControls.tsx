@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Edit, FileText, Palette, RotateCcw, Settings, X } from 'lucide-react';
-import { TabsContainer } from './shared';
-import { BasicListControls, StyleListControls, TextStylingControls } from './list';
+import { TabsContainer } from '../../shared';
+import { BasicListControls, StyleListControls, TextStylingControls } from './components';
 import { 
   LIST_CONFIG,
   createListStyleHandler,
@@ -21,8 +21,8 @@ import {
   removeListItem,
   updateListItem,
   validateListContent
-} from '../config/lists';
-import { enrichedListPresets, enrichedListTemplates } from '../config/lists/presets';
+} from '../../config/lists';
+import { enrichedListPresets, enrichedListTemplates } from '../../config/lists/presets';
 import { 
   TEXT_OPTIONS,
   toggleStyleOption,
@@ -34,8 +34,8 @@ import {
   handleOpacityChange,
   getCurrentOpacity,
   resetTextStyles
-} from '../config/text';
-import type { Block } from '../CanvasEditor';
+} from '../../config/text';
+import type { Block } from '../../CanvasEditor';
 
 interface ListControlsProps {
   styles: string;

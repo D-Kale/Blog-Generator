@@ -1,0 +1,157 @@
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           29/4/2026    10:42                editor
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           29/4/2026    12:06                components
+d----           15/4/2026    18:50                config
+d----           29/4/2026    12:08                features
+d----           15/4/2026    20:38                helpers
+d----            9/4/2026    13:09                ui
+-a---           29/4/2026    12:06          11597 CanvasEditor.tsx
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\components
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           13/4/2026    11:23                ui
+-a---           29/4/2026    11:40          11269 ImageControls.tsx
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\components\ui
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           15/4/2026    13:12           2305 ControlGroup.tsx
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\config
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           15/4/2026    13:49                images
+d----           15/4/2026    18:50                lists
+d----           15/4/2026    18:34                text
+-a---           15/4/2026    18:40            455 imageControls.ts
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\config\images
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           15/4/2026    13:49           5124 constants.ts
+-a---           15/4/2026    13:50           3567 handlers.ts
+-a---           15/4/2026    13:50            521 index.ts
+-a---           15/4/2026    13:49           4217 validators.ts
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\config\lists
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           15/4/2026    15:32           7147 constants.ts
+-a---           15/4/2026    18:59           8756 handlers.ts
+-a---           15/4/2026    18:50           1904 index.ts
+-a---           15/4/2026    18:35           1518 presets.ts
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\config\text
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           15/4/2026    14:31           8066 constants.ts
+-a---           15/4/2026    19:01           7005 handlers.ts
+-a---           15/4/2026    18:39            518 index.ts
+-a---           15/4/2026    18:34           1316 presets.ts
+-a---           15/4/2026    14:31           7632 validators.ts
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\features
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           29/4/2026    12:06                list
+d----           29/4/2026    11:27                shared
+d----           29/4/2026    10:46                text
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\features\list
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           29/4/2026    10:44                components
+-a---           29/4/2026    12:06           3834 ListControls.tsx
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\features\list\components
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           15/4/2026    18:56           4616 BasicListControls.tsx
+-a---           15/4/2026    20:03            175 index.ts
+-a---           29/4/2026    12:06           3346 StyleListControls.tsx
+-a---           29/4/2026    11:38           6159 TextStylingControls.tsx
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\features\shared
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           15/4/2026    20:02                components
+d----           29/4/2026    11:11                controls
+d----           29/4/2026    11:12                tabs
+-a---           29/4/2026    11:39            413 index.ts
+-a---           29/4/2026    11:35           1541 TabbedEditor.tsx
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\features\shared\components
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           15/4/2026    18:30           1668 ColorPalette.tsx
+-a---           29/4/2026    11:38           8143 FormatControls.tsx
+-a---           29/4/2026    11:35            294 index.ts
+-a---           15/4/2026    18:30           2260 PresetGrid.tsx
+-a---           15/4/2026    18:30           1241 SelectControl.tsx
+-a---           15/4/2026    18:30           1452 TabsContainer.tsx
+-a---           15/4/2026    18:44           3217 TemplateSelector.tsx
+-a---           15/4/2026    18:44           2170 ThemeSelector.tsx
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\features\shared\controls
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           29/4/2026    11:37           4273 controlFactory.ts
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\features\shared\tabs
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           29/4/2026    11:36           1694 StyleControls.tsx
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\features\text
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           29/4/2026    10:43                components
+-a---           29/4/2026    11:31           4022 TextControls.tsx
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\features\text\components
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           15/4/2026    20:07           6692 AdvancedTextControls.tsx
+-a---           29/4/2026    11:30           1996 BasicTextControls.tsx
+-a---           15/4/2026    18:56            177 index.ts
+-a---           29/4/2026    11:28           7183 StyleTextControls.tsx
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\helpers
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           15/4/2026    20:38           3078 iconHelpers.ts
+-a---           15/4/2026    20:38            444 index.ts
+-a---           15/4/2026    20:38           2565 styleHelpers.ts
+
+    Directory: C:\Users\isapa\Music\Astro\XV\src\components\editor\ui
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           15/4/2026    14:41           5487 CanvasBlock.tsx
+

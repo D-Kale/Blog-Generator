@@ -1,7 +1,7 @@
 import React from 'react';
 import { Sparkles, Zap, Palette, Settings, Minus } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import { TemplateSelector, ColorPalette, PresetGrid, SelectControl } from '../shared';
+import { TemplateSelector, ColorPalette, PresetGrid, SelectControl } from '../../../shared';
 
 interface StyleListControlsProps {
   enrichedTemplates: Array<{
