@@ -27,8 +27,8 @@ export const TemplateSelector: React.FC<TemplateSelectorProps> = ({
   icon: Icon = List,
   columns = 2
 }) => {
-  const gridClass = columns === 1 
-    ? "grid grid-cols-1 gap-3" 
+  const gridClass = columns === 1
+    ? "grid grid-cols-1 gap-3"
     : "grid grid-cols-1 sm:grid-cols-2 gap-3";
 
   return (
@@ -40,9 +40,9 @@ export const TemplateSelector: React.FC<TemplateSelectorProps> = ({
       <div className={gridClass}>
         {templates.map((template) => {
           const TemplateIcon = template.icon;
-          const isApplied = listItems.length >= template.items.length && 
+          const isApplied = listItems.length >= template.items.length &&
             template.items.every((item, index) => listItems[index]?.includes(item.substring(0, 5)));
-          
+
           return (
             <button
               key={template.key}
@@ -53,15 +53,14 @@ export const TemplateSelector: React.FC<TemplateSelectorProps> = ({
                   : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm'
               }`}
             >
-              {/* Indicador de estado */}
               {isApplied && (
                 <div className="absolute top-2 right-2 w-2 h-2 bg-green-500 rounded-full" />
               )}
-              
+
               <div className="flex items-center gap-2">
                 <div className={`p-2 rounded-lg transition-colors flex-shrink-0 ${
-                  isApplied 
-                    ? 'bg-green-100 text-green-600' 
+                  isApplied
+                    ? 'bg-green-100 text-green-600'
                     : 'bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-600'
                 }`}>
                   <TemplateIcon size={16} />

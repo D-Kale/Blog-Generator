@@ -22,7 +22,6 @@ export const TabsContainer: React.FC<TabsContainerProps> = ({
 }) => {
   return (
     <div className="flex flex-col h-full bg-white">
-      {/* Header con pestañas */}
       <div className="border-b border-gray-200">
         <div className="flex">
           {tabs.map((tab) => {
@@ -45,7 +44,6 @@ export const TabsContainer: React.FC<TabsContainerProps> = ({
         </div>
       </div>
 
-      {/* Contenido dinámico */}
       <div className="flex-1 overflow-y-auto">
         {children}
       </div>

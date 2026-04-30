@@ -32,7 +32,7 @@ export const SelectControl: React.FC<SelectControlProps> = ({
         {Icon && <Icon size={12} />}
         {label}
       </label>
-      <select 
+      <select
         className={className}
         value={value}
         onChange={(e) => onChange(e.target.value)}

@@ -31,8 +31,8 @@ export const ColorPalette: React.FC<ColorPaletteProps> = ({
             key={color.value}
             onClick={() => onColorChange(color.value)}
             className={`relative h-8 w-8 rounded-full transition-all border-2 flex-shrink-0 ${color.bg} ${
-              selectedColors.includes(color.value) 
-                ? 'border-blue-500 scale-110 shadow-md ring-2 ring-blue-100' 
+              selectedColors.includes(color.value)
+                ? 'border-blue-500 scale-110 shadow-md ring-2 ring-blue-100'
                 : 'border-transparent hover:border-gray-300 hover:scale-105'
             }`}
             title={color.name}
@@ -43,7 +43,7 @@ export const ColorPalette: React.FC<ColorPaletteProps> = ({
           </button>
         ))}
       </div>
-      
+
       {showReset && selectedColors.length > 0 && onReset && (
         <button
           onClick={onReset}

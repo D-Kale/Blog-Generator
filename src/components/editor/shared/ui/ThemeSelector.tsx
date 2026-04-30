@@ -35,7 +35,7 @@ export const ThemeSelector: React.FC<ThemeSelectorProps> = ({
         {themes.map((theme) => {
           const ThemeIcon = theme.icon;
           const isActive = theme.colors.some(color => currentClasses.includes(color));
-          
+
           return (
             <button
               key={theme.key}
@@ -57,7 +57,7 @@ export const ThemeSelector: React.FC<ThemeSelectorProps> = ({
               </div>
               <div className="flex gap-1">
                 {theme.colors.slice(0, 3).map((color, index) => (
-                  <div 
+                  <div
                     key={index}
                     className={`w-3 h-3 rounded-full ${color.replace('text-', 'bg-')}`}
                   />

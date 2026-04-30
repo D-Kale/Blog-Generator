@@ -25,8 +25,8 @@ export const PresetGrid: React.FC<PresetGridProps> = ({
   className = "",
   showActiveIndicator = true
 }) => {
-  const gridClass = columns === 1 
-    ? "grid grid-cols-1 gap-4" 
+  const gridClass = columns === 1
+    ? "grid grid-cols-1 gap-4"
     : "grid grid-cols-1 sm:grid-cols-2 gap-4";
 
   return (
@@ -34,7 +34,7 @@ export const PresetGrid: React.FC<PresetGridProps> = ({
       {presets.map((preset) => {
         const Icon = preset.icon;
         const isActive = preset.isActive || false;
-        
+
         return (
           <button
             key={preset.key}
@@ -45,11 +45,10 @@ export const PresetGrid: React.FC<PresetGridProps> = ({
                 : 'border-gray-200 hover:border-gray-300 hover:shadow-sm'
             }`}
           >
-            {/* Indicador de estado */}
             {showActiveIndicator && isActive && (
               <div className="absolute top-2 right-2 w-2 h-2 bg-blue-500 rounded-full z-10" />
             )}
-            
+
             <div className="flex items-start gap-3">
               <div className={`p-2 rounded-lg flex-shrink-0 ${
                 isActive ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-600'

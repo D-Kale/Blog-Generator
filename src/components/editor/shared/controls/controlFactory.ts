@@ -1,9 +1,8 @@
-import { getAlignmentIcon } from '../../../helpers/iconHelpers';
+import { getAlignmentIcon } from '../../helpers/iconHelpers';
 
-// Creates alignment control item (used by both text & list)
 export const createAlignmentControl = (options: any, currentClasses: string[], onChange: Function) => ({
   label: "Alineación",
-  icon: null, // Will be set by FormatControls component
+  icon: null,
   value: currentClasses.find(c => options.alignments?.some((a: any) => a.value === c)) || '',
   options: options.alignments?.map((align: any) => ({
     ...align,
@@ -12,7 +11,6 @@ export const createAlignmentControl = (options: any, currentClasses: string[], o
   onChange: (value: string) => onChange('alignments', value)
 });
 
-// Creates style control item
 export const createStyleControl = (options: any, currentClasses: string[], onChange: Function) => ({
   label: "Estilo",
   icon: null,
@@ -24,7 +22,6 @@ export const createStyleControl = (options: any, currentClasses: string[], onCha
   onChange: (value: string) => onChange('styles', value)
 });
 
-// Creates decoration control item
 export const createDecorationControl = (options: any, currentClasses: string[], onChange: Function) => ({
   label: "Decoración",
   icon: null,
@@ -37,11 +34,10 @@ export const createDecorationControl = (options: any, currentClasses: string[], 
   onChange: (value: string) => onChange('decoration', value)
 });
 
-// Creates font size control item
 export const createFontSizeControl = (options: any, currentClasses: string[], onChange: Function) => ({
   label: "Tamaño de fuente",
   icon: null,
-  value: currentClasses.find(c => options.fontSizes.some((size: any) => size.value === c)) || '',
+  value: currentClasses.find(c => options.fontSizes?.some((size: any) => size.value === c)) || '',
   options: options.fontSizes?.map((size: any) => ({
     ...size,
     icon: null
@@ -49,7 +45,6 @@ export const createFontSizeControl = (options: any, currentClasses: string[], on
   onChange: (value: string) => onChange('fontSizes', value)
 });
 
-// Creates font weight control item
 export const createFontWeightControl = (options: any, currentClasses: string[], onChange: Function) => ({
   label: "Peso de fuente",
   icon: null,
@@ -61,7 +56,6 @@ export const createFontWeightControl = (options: any, currentClasses: string[], 
   onChange: (value: string) => onChange('weights', value)
 });
 
-// Creates font family control item
 export const createFontFamilyControl = (options: any, currentClasses: string[], onChange: Function) => ({
   label: "Familia de fuente",
   icon: null,
@@ -73,7 +67,6 @@ export const createFontFamilyControl = (options: any, currentClasses: string[], 
   onChange: (value: string) => onChange('fontFamilies', value)
 });
 
-// Creates line height control item
 export const createLineHeightControl = (options: any, currentClasses: string[], onChange: Function) => ({
   label: "Altura de línea",
   icon: null,
@@ -85,7 +78,6 @@ export const createLineHeightControl = (options: any, currentClasses: string[], 
   onChange: (value: string) => onChange('lineHeight', value)
 });
 
-// Creates letter spacing control item
 export const createLetterSpacingControl = (options: any, currentClasses: string[], onChange: Function) => ({
   label: "Espaciado entre letras",
   icon: null,
@@ -97,7 +89,6 @@ export const createLetterSpacingControl = (options: any, currentClasses: string[
   onChange: (value: string) => onChange('letterSpacing', value)
 });
 
-// Creates transform control item
 export const createTransformControl = (options: any, currentClasses: string[], onChange: Function) => ({
   label: "Transformación",
   icon: null,

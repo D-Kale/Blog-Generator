@@ -12,7 +12,7 @@ import {
 import { TextControls } from '../features/text/TextControls';
 import { ListControls } from '../features/list/ListControls';
 import { CanvasBlock } from './CanvasBlock';
-import { ImageControls } from '../shared/ImageControls';
+import { ImageControls } from '../features/images';
 
 export interface Block {
   id: string;

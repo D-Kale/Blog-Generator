@@ -13,86 +13,76 @@
 - `pnpm build` - Build for production
 - `pnpm preview` - Preview production build
 
-## Project Structure Overview
-The project follows a modular component architecture with a focus on separation of concerns:
+## Project Structure
 
+### Core Architecture
 ```
 src/
 ├─ components/
-│  ├─ editor/           # Main editor component
-│  │  ├─ components/      # Editor UI components
-│  │  │  ├─ text/       # Text-specific controls
-│  │  │  ├─ list/       # List-specific controls
-│  │  │  ├─ shared/      # Shared UI components
-│  │  │  └─ ui/         # Generic UI components
-│  │  ├─ config/         # Configuration modules for different features
-│  │  │  ├─ text/
-│  │  │  ├─ lists/
-│  │  │  └─ images/
-│  │  ├─ helpers/       # Centralized helper functions
-│  │  └─ ui/          # Reusable UI components
-│  │
-│  ├─ layouts/          # Page layouts
-│  ├─ pages/            # Page components
-│  └─ assets/          # Static assets
-└─ styles/             # Global styles
+│  ├─ editor/
+│  │  ├─ core/              # CanvasEditor, CanvasBlock (main editor logic)
+│  │  ├─ features/          # Feature-specific components
+│  │  │  ├─ text/           # Text editing feature
+│  │  │  ├─ list/           # List editing feature
+│  │  │  └─ images/         # Image editing feature (ImageControls)
+│  │  ├─ shared/            # Shared editor components
+│  │  │  ├─ primitives/     # Dumb UI components (SelectControl, ColorPalette)
+│  │  │  ├─ ui/             # Composite UI (TabsContainer, PresetGrid)
+│  │  │  ├─ controls/       # Shared controls (FormatControls only)
+│  │  │  └─ helpers/        # Shared helpers (iconHelpers, styleHelpers)
+│  │  └─ config/            # Configuration modules by feature
+│  ├─ pages/                # Page components
+│  └─ assets/               # Static assets
+└─ styles/                  # Global styles
 ```
 
-## Scalability Improvements
+### Feature vs Shared Guidelines
 
-### Current Structure Issues
-1. **Component Organization**: Components are well-organized by feature type (text, list, shared) but could benefit from better code splitting
-2. **Helper Centralization**: Helpers are already centralized in `src/components/editor/helpers/` which is good
-3. **Configuration Structure**: Config files are well-organized by feature (`text`, `lists`, `images`)
+**Use `features/` when:**
+- Component is specific to one feature (text, list, image)
+- Needs dedicated tab components or sub-components
+- Example: `ImageControls` → `features/images/`
 
-### Proposed Improvements for Better Scalability
+**Use `shared/` when:**
+- Component is reusable across features
+- Pure UI primitive or composite pattern
+- Example: `FormatControls` → `shared/controls/`
 
-1. **Component Structure Optimization**:
-   - Consider creating feature-specific subdirectories in `src/components/editor/components/`
-   - Each feature (text, list, shared) has its own index.ts for clean exports
+### Shared Component Tiers
+1. **primitives/** - Atomic, stateless UI components
+   - `SelectControl`, `ColorPalette`, `ControlGroup`
+   - No external dependencies except Tailwind/Lucide
 
-2. **Code Splitting Strategy**:
-   - Dynamic imports for feature-specific controls
-   - Bundle analysis to identify opportunities for reducing initial bundle size
-   - Consider lazy loading controls that aren't immediately needed
+2. **ui/** - Composite UI components
+   - `TabsContainer`, `TabbedEditor`, `PresetGrid`, `TemplateSelector`, `ThemeSelector`
+   - Combine primitives for reusable patterns
 
-3. **Configuration Organization**:
-   - The config structure with `text`, `lists`, and `images` directories is well-separated
-   - Each config module exports constants, handlers, presets, and validators
+3. **controls/** - Shared control panels
+   - `FormatControls/` - Text/list formatting only
+   - Import from `primitives/` and `ui/`
 
-4. **Helper Functions**:
-   - Centralized helpers in `src/components/editor/helpers/` with iconHelpers and styleHelpers
-   - Good documentation in HELPERS_DOCUMENTATION.md for maintainability
+## Development Guidelines
 
-### Performance Optimization Opportunities
+### Component Size Limits
+- Keep components under 200 lines
+- Split large components using the tier structure above
+- Extract stateless sub-components when possible
 
-1. **Component Code Splitting**:
-   - Implement dynamic imports for `TextControls`, `ListControls`, and other heavy components
-   - Split components by feature rather than loading everything upfront
+### Import Paths
+- Use relative imports within tiers
+- Cross-tier imports: `primitives` ← `ui` ← `controls`
+- Features import from shared, not vice versa
 
-2. **Bundle Size Reduction**:
-   - Analyze with `pnpm build --stats` to identify large bundles
-   - Consider using `React.lazy` for non-critical components
+### Code Organization
+- Each tier has its own `index.ts` for clean exports
+- Feature folders use subdirectories with index exports
+- Helpers centralized in `src/components/editor/helpers/`
 
-3. **Asset Optimization**:
-   - Optimize the large component files:
-     - `src/components/editor/components/text/StyleTextControls.tsx` (178 lines)
-     - `src/components/editor/components/text/AdvancedTextControls.tsx` (167 lines)
-     - `src/components/editor/components/shared/FormatControls.tsx` (256 lines)
+## Performance
+- Run `pnpm build --stats` for bundle analysis
+- Consider lazy-loading for heavy controls
+- Dynamic imports for non-critical features
 
-4. **Helper Functions**:
-   - The centralized helpers in `src/components/editor/helpers/` are well-organized
-   - Continue the pattern of avoiding duplication (as documented in HELPERS_DOCUMENTATION.md)
-
-### Key Files for Performance Considerations
-- Large component files that could be split:
-  - `src/components/editor/components/text/StyleTextControls.tsx` - Consider breaking into smaller components
-  - `src/components/editor/components/shared/FormatControls.tsx` - Very large at 256 lines
-  - `src/components/editor/components/text/AdvancedTextControls.tsx` - Could be split into smaller modules
-
-### Best Practices for Scalability
-1. **Component Size**: Keep components under 200 lines when possible
-2. **Helper Centralization**: Continue using the centralized helpers pattern
-3. **Configuration Management**: Maintain the current config structure
-4. **Dynamic Loading**: Implement code splitting for better performance
-5. **Bundle Analysis**: Regular analysis of build outputs for optimization opportunities
+## Testing
+- No test framework configured yet
+- Manual testing via dev server (`pnpm dev`)
