@@ -260,10 +260,10 @@ Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 ## 👨‍💻 Autor
 
-Desarrollado por **isapa**
+Desarrollado por **Andrés Sánchez**
 
-- GitHub: [@isapa](https://github.com/isapa)
-- Repositorio: [Blog-Generator](https://github.com/isapa/Music/Astro/XV)
+- GitHub: [@isapa](https://github.com/D-Kale)
+- Repositorio: [Blog-Generator](https://github.com/D-Kale/Blog-Generator)
 
 ---
 
@@ -281,7 +281,7 @@ Desarrollado por **isapa**
 
 Si tienes alguna duda o problema, por favor:
 1. Revisa la [documentación](https://docs.astro.build/)
-2. Abre un [issue](https://github.com/isapa/Music/Astro/XV/issues)
+2. Abre un [issue](https://github.com/D-Kale/Blog-Generator)
 3. Únete al [Discord de Astro](https://astro.build/chat)
 
 ---
